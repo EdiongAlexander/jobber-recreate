@@ -1,0 +1,68 @@
+.your{
+    margin-right: 20px;
+}
+
+/* .result-top{
+    padding-left: 50px;
+} */
+ 
+#result{
+    padding: 4em 2em 4em 9em !important;
+}
+.result-contents{
+    width: 100%;
+}
+
+.result-form-group{
+    padding: 40px 20px 20px;
+    display: flex;
+    width: 80%;
+    box-shadow: 0px 4px 29px #F0F3FF;
+    border-radius: 35px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+#my-id{
+    margin-bottom: 10px !important;
+}
+
+.r-form label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.r-form{
+    width: 30%;   
+}
+
+.r-input{
+    padding: 15px 5px;
+    background-color: #F1F3FD;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.pencil{
+    margin-left: -25px;
+}
+.progress-group{
+    width: 46%;
+}
+.progress-group label{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    width: 80%;
+}
+.progress{
+    width: 80%;
+    margin-bottom: 20px;
+    accent-color: #800165;
+}
+
+

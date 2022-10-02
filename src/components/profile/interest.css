@@ -1,0 +1,101 @@
+.interest{
+    width: 90%;
+    margin-left: 20px;
+    padding: 50px 80px 5px;
+    border-radius: 35px;
+    box-shadow: 0px 4px 29px #F0F3FF;
+    position: relative;
+}
+
+.score{
+    margin-bottom: 50px;
+}
+.form-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-one, .side-two{
+    width: 45%;
+}
+
+.interest label{
+    display: flex;
+    justify-content: space-between;
+    color: #ACB7EB;
+}
+
+.faded{
+    margin-top: 40px;
+    color: #ACB7EB;
+    font-weight: 400;
+}
+
+.red{
+    color: red;
+}
+
+.right{
+    color: black !important;
+}
+
+.range{
+    width: 100%;
+    cursor: pointer;
+}
+
+.form-group{
+    margin-bottom: 30px;
+}
+
+#done{
+    background-color: #066AEF;
+    color: white;
+    border: none;
+    outline: none;
+    box-shadow: 0px 4px 14px rgba(51, 157, 255, 0.22);
+    border-radius: 6px;
+    padding: 13px 55px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-left: 12.5em;
+    cursor: pointer;
+}
+
+/**************************** Changing range color ****************************/
+
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 6px;
+    background: linear-gradient(90deg, #800165 0%, #D3014E 100%);
+    border: none;
+    border-radius: 17px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: white;
+    margin-top: -4px;
+    border: 3px solid rgba(204, 65, 116, 0.38);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: linear-gradient(90deg, #800165 0%, #D3014E 100%);
+} 
+
+
+
+

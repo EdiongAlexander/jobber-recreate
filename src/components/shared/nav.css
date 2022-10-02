@@ -1,0 +1,51 @@
+#profile-nav-nav, #classnav{
+    background-color: #333333;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 10px;  
+}
+
+#profile-nav-nav a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-logo{
+    margin-top: 10px;
+}
+
+.nav-nav{
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.icon{
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+}
+
+.r-icon{
+    position: absolute;
+    bottom: -2px;
+}
+
+/******************************** Class Nav **********************************/
+
+.who{
+    margin-top: 20px;
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+.who p{
+    margin-top: 2px;
+}
+.small-pic{
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 0;
+    position: relative;
+    bottom: 8px;
+}
