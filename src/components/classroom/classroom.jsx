@@ -2,15 +2,24 @@ import React from "react";
 import { useState } from "react";
 import ClassNav from "../shared/classNav";
 import './classroom.css';
+import Students from "./students";
+import Topics from "./topics";
 
 
 const Classroom = () => {
 
-const [topics, setTopics] = useState(false)
+    const [topics, setTopics] = useState(false)
 
-const handleTopics = () => {
-    setTopics(!topics)
-}
+    const handleTopics = () => {
+        setStudents(false)
+        setTopics(!topics)
+    }
+    const [students, setStudents] = useState(false)
+
+    const handleStudents = () => {
+        setTopics(false)
+        setStudents(!students)
+    }
 
     return (
         <>
@@ -26,7 +35,8 @@ const handleTopics = () => {
                 <nav className="vidoes-nav">
                     <div className="left-aside">
                         <button className="left-btn" id="move-me" onClick={handleTopics}><img src="Vector-stack.png" alt="group" className="btn-icon left-icon" /><span id="topic">Topics</span></button>
-                        <button className="left-btn"><img src="Vector-group.png" alt="stack" className="btn-icon left-icon" />Students <span className="seven">7</span></button>
+
+                        <button className="left-btn" onClick={handleStudents}><img src="Vector-group.png" alt="stack" className="btn-icon left-icon" />Students <span className="seven">7</span></button>
                     </div>
 
                     <div className="right-aside">
@@ -39,27 +49,19 @@ const handleTopics = () => {
 
                 <div className="video-display">
 
-                    {topics ? <div className="video-scroll">
-                        <div className="topic-lists">
-                            <p className="topic-list"><span><img src="play.png" alt="play" /></span>Python as a computer programming language</p>
-                            <p className="topic-list"><span><img src="play.png" alt="play" /></span>Python as a computer programming language</p>
-                            <p className="topic-list"><span><img src="play.png" alt="play" /></span>Python as a computer programming language</p>
-                            <p className="topic-list"><span><img src="play.png" alt="play" /></span>Python as a computer programming language</p>
-                            <p className="topic-list"><span><img src="play.png" alt="play" /></span>Python as a computer programming language</p>
-                            <p className="topic-list"><span><img src="play.png" alt="play" /></span>Python as a computer programming language</p>
-                            <p className="topic-list"><span><img src="play.png" alt="play" /></span>Python as a computer programming language</p>
-                            <p className="topic-list"><span><img src="play.png" alt="play" /></span>Python as a computer programming language</p>
-                            <p className="topic-list"><span><img src="play.png" alt="play" /></span>Python as a computer programming language</p>
-                            <p className="topic-list"><span><img src="play.png" alt="play" /></span>Python as a computer programming language</p>
-                            <p className="topic-list"><span><img src="play.png" alt="play" /></span>Python as a computer programming language</p>
-                            <p className="topic-list"><span><img src="play.png" alt="play" /></span>Python as a computer programming language</p>
-                            <p className="topic-list"><span><img src="play.png" alt="play" /></span>Python as a computer programming language</p>
-                            <p className="topic-list"><span><img src="play.png" alt="play" /></span>Python as a computer programming language</p>
-                            <p className="topic-list"><span><img src="play.png" alt="play" /></span>Python as a computer programming language</p>
-                            <p className="topic-list"><span><img src="play.png" alt="play" /></span>Python as a computer programming language</p>
-                            <p className="topic-list"><span><img src="play.png" alt="play" /></span>Python as a computer programming language</p>
-                        </div>
-                    </div> : null}
+                    {
+                        topics ?
+                            <Topics />
+                            :
+                            null
+                    }
+
+                    {
+                        students ?
+                            <Students />
+                            :
+                            null
+                    }
 
                     <div className="actual-video">
                         {/* <p>video</p> */}

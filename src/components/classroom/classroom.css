@@ -111,8 +111,7 @@
 
 /******************* scroll bar styles ************************/
 .topic-lists::-webkit-scrollbar {
-    width: 3px;
-    
+    width: 3px; 
   }
   
   /* Track */
@@ -143,4 +142,45 @@
 .topic-list img{
     height: 28px;
     margin-right: 18px;
+}
+
+/***************************** Students styles ********************************/
+
+.students-list{
+    display: flex !important;
+    justify-content: space-between;
+}
+
+.students-list button{
+    padding: 10px 15px;
+    box-sizing: border-box;
+    border: 1px solid #ACB7EB;
+    border-radius: 11px;
+    color: #ACB7EB;
+    background-color: transparent;
+    outline: none;
+}
+
+.students-list button:hover{
+    background: linear-gradient(180deg, #860164 0%, #CA0151 100%);
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.students-icon{
+    height: 15px !important;
+    position: relative;
+    top: 3px;
+    margin-right: 10px !important;
+}
+
+.roundup{
+    height: 40px !important;
+    width: 40px !important;
+    border-radius: 20px;
+}
+.shift-up{
+    position: relative;
+    bottom: 10px;
 }
