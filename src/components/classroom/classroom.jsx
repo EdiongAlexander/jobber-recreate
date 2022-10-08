@@ -2,28 +2,51 @@ import React from "react";
 import { useState } from "react";
 import ClassNav from "../shared/classNav";
 import './classroom.css';
+import Feedback from "./feedback/feedback";
+import Lab from "./lab";
+import Notes from "./notes";
 import Students from "./students";
 import Topics from "./topics";
 
 
 const Classroom = () => {
 
-    const [topics, setTopics] = useState(false)
+    const [topics, setTopics] = useState(true)
+    const [students, setStudents] = useState(false)
+    const [notes, setNotes] = useState(false)
+    const [feedback, setFeedback] = useState(false)
+    const [lab, setLab] = useState(false)
+
 
     const handleTopics = () => {
         setStudents(false)
         setTopics(!topics)
     }
-    const [students, setStudents] = useState(false)
 
     const handleStudents = () => {
         setTopics(false)
         setStudents(!students)
     }
 
+    const handleNotes = () => {
+        setNotes(!notes)
+    }
+
+    const handleFeedback = () => {
+        setFeedback(true)
+    }
+    const removeFeedback = () => {
+        setFeedback(false)
+    }
+
+    const handleLab = () => {
+        setLab(!lab)
+    }
+
     return (
         <>
             <ClassNav />
+            {feedback ? <Feedback remove={removeFeedback}/> : null}
             <div className="main-div">
                 <p className="class-course">
                     <span className="course-icon">
@@ -41,8 +64,8 @@ const Classroom = () => {
 
                     <div className="right-aside">
                         <button className="right-left-btn"><img src="Vector 4-play.png" alt="group" className="btn-icon right-icon" />Video</button>
-                        <button className="right-left-btn"><img src="Vectorblack-tick.png" alt="group" className="btn-icon right-icon" />Lab</button>
-                        <button className="right-left-btn"><img src="Vector-note.png" alt="group" className="btn-icon right-icon" />Note</button>
+                        <button className="right-left-btn" onClick={handleLab}><img src="Vectorblack-tick.png" alt="group" className="btn-icon right-icon" />Lab</button>
+                        <button className="right-left-btn" onClick={handleNotes}><img src="Vector-note.png" alt="group" className="btn-icon right-icon"/>Note</button>
                         <button className="right-left-btn"><img src="Vector-chat.png" alt="group" className="btn-icon right-icon" />Chat</button>
                     </div>
                 </nav>
@@ -63,9 +86,9 @@ const Classroom = () => {
                             null
                     }
 
-                    <div className="actual-video">
-                        {/* <p>video</p> */}
-                    </div>
+                    {notes ? <Notes /> : null}
+
+                    {lab ? <Lab feedback={handleFeedback}/> : null}
                 </div>
             </div>
         </>

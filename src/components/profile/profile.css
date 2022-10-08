@@ -208,14 +208,14 @@ main{
 
 /****************** how to change list color ****************************/
 
-ol li {
+.profile-contents-list ol li {
     counter-increment: list;
     list-style-type: none;
     position: relative;
   }
   
   /* Output the numbers using the counter() function, but use a custom color, and position the numbers how we want */
-  ol li:before {
+  .profile-contents-list ol li:before {
     color: #CC4174;
     content: counter(list) ".";
     left: -50px;

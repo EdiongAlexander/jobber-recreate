@@ -1,0 +1,53 @@
+
+.feedback{
+    background: rgba(29, 29, 29, 0.22);
+    line-height: 21.7px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+}
+.feeback-list{
+    height: 40vh !important;
+}
+.feedback-modal{
+    width: 25%;
+    background-color: white;
+    box-shadow: none !important;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+.feedback-close{
+    cursor: pointer;
+    float: right;
+    margin-top: -15px;
+   /* right: 0px;
+    top: 0px; */
+}
+/* .feedback-profile-img{
+
+} */
+
+.feedback-head{
+    display: flex;
+    align-items: flex-start;
+}
+.feedback-head p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.feedback-instructor{
+    color: #D3014E;
+    font-style: italic;
+}
+
+.feedback-head img{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px; 
+    margin-right: 20px;
+}

@@ -1,0 +1,147 @@
+
+.lab-content{
+    line-height: 22px;
+}
+.lab-content h3{
+    background-color: #F1F3FD;
+    border-radius: 17px;
+    font-size: 16px;
+    padding: 15px 10px 15px 20px ;
+}
+
+.lab-list li{
+    margin-bottom: 40px;
+}
+
+/************************* Customizing input type upload ***********************************/
+.lab-file-upload {
+    color: transparent;
+  }
+  .lab-file-upload::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .lab-file-upload::before {
+    content: 'Upload Lab';
+    color: white;
+    display: inline-block;
+    background: -webkit-linear-gradient(-90deg, #830164 0%, #CC0150 100%);
+    border: none;
+    border-radius: 11px;
+    padding: 15px 38px;
+    outline: none;
+    /* white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none; */
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 11pt;
+  }
+  .lab-file-upload:hover::before {
+    border-color: black;
+  }
+  .lab-file-upload:active {
+    outline: 0;
+  }
+  .lab-file-upload:active::before {
+    background: -webkit-linear-gradient(-90deg, #830164 0%, #CC0150 100%);; 
+  }
+
+  /********************* lab-form styles ***********************************/
+
+  .lab-form{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: solid 2px #EFF2FF;
+    border-top: solid 2px #EFF2FF;
+  }
+  .lab-form form, .lab-submitted{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .lab-upload-img{
+    position: absolute;
+    left: 10px;
+    top: 23px;
+  }
+
+  .file-section{
+    font-size: small;
+    text-align: center;
+    border-right: solid 2px #EFF2FF;
+    border-left: solid 2px #EFF2FF;
+  }
+  .feedback-link{
+    color: #066AEF;
+    font-size: small;
+    cursor: pointer;
+  }
+  .lab-passed{
+    color: white;
+    background-color: #27AE60;
+    border-radius: 11px;
+    border: none;
+    outline: none;
+    text-align: center;
+    padding: 15px 48px;
+  }
+  .lab-passed img{
+    width: 30px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+  }
+  .pass-tick{
+    margin-right: 20px;
+  }
+  .l-r-icon{
+    margin-left: 28px;
+  }
+
+  .file-here{
+    text-align: center;
+    font-size: small;
+    margin-left: 15px;
+    width: 40%;
+    border-right: solid 2px #EFF2FF;
+    border-left: solid 2px #EFF2FF;
+  }
+  .bordered-hint{
+    padding-bottom: 10px;
+  }
+
+  .lab-thirty{
+    width: 30%;
+  }
+
+  .lab-submit-btn{
+      padding: 12px 10px;
+      cursor: pointer;
+      background-color: transparent;
+      color: #ACB7EB;
+      border: 1px solid #ACB7EB;
+      border-radius: 11px;
+  }
+
+  /********************************* Changing list style *************************************/
+
+  .lab-main-contents ol li {
+    counter-increment: list;
+    list-style-type: none;
+    position: relative;
+  }
+  
+  /* Output the numbers using the counter() function, but use a custom color, and position the numbers how we want */
+  .lab-main-contents ol li:before {
+    color: black;
+    background: #F1F3FD;
+    border-radius: 7px;
+    content: counter(list);
+    left: -50px;
+    padding: 3px;
+    position: absolute;
+    text-align: center;
+    width: 26px;
+  }
